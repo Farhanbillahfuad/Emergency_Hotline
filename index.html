@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emergency Service Directory</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./srcipts/script.js" defer></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+
+ <nav class="bg-white px-4 py-3 shadow">
+  <div class="flex justify-between items-center">
+ 
+    <div class="flex items-center space-x-2">
+      <img src="./B12-A5-Emergency-Hotline/assets/logo-dark.png" 
+           alt="logo" class="h-10">
+      <p class="text-green-800 font-bold text-2xl">Emergency Service Directory</p>
+    </div>
+
+
+    <div class="flex items-center space-x-6">
+
+      <div class="flex items-center space-x-1">
+        <img class="h-8 w-8" src="./B12-A5-Emergency-Hotline/assets/heart.png" alt="love">
+        <span id="loveCount" class="text-black font-semibold">0</span>
+      </div>
+
+      
+      <div class="flex items-center space-x-1">
+        <span class="font-semibold"><img class="h-8 w-8" src="./B12-A5-Emergency-Hotline/assets/coin.png" alt=""></span>
+        <span id="balance" class="text-black font-semibold">100</span>
+      </div>
+
+     
+      <div class="flex bg-green-900 rounded-2xl py-1 px-3 items-center space-x-1">
+        <span id="copyCount" class="text-white font-semibold">0</span>
+        <span class="text-white">copy</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  
+  <header class="bg-gradient-to-r from-green-700 to-green-500 text-white py-8 shadow-lg">
+    <div class="container mx-auto flex flex-col md:flex-row justify-center items-center space-x-4">
+      <img src="./B12-A5-Emergency-Hotline/assets/logo-dark.png" 
+           alt="logo" class="h-16 mb-4 md:mb-0">
+      <div class="text-center md:text-left">
+        <h1 class="font-bold text-3xl">Emergency Service Directory</h1>
+        <p class="text-sm">Government Emergency Services at Your Fingertips</p>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="container mx-auto p-6 grid lg:grid-cols-3 gap-6">
+
+ 
+    <div class="col-span-2 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      
+      <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition relative">
+        <button onclick="toggleLove(this)" class="absolute top-3 right-3 text-xl text-gray-400">♡</button>
+        <img src="./B12-A5-Emergency-Hotline/assets/emergency.png" alt="Emergency" class="h-12 mx-auto mb-3">
+        <h2 class="font-semibold text-md text-center">National Emergency Number</h2>
+        <p class="text-sm text-gray-500 text-center">National Emergency</p>
+        <p class="text-2xl font-bold my-2 text-center">999</p>
+        <p class="text-sm  my-2 text-center">All</p>
+        <div class="flex justify-center space-x-2 mt-3">
+          <button onclick="copyNumber('999')" class="px-3 py-1 bg-gray-200 rounded">Copy</button>
+          <button onclick="makeCall('National Emergency Number','999')" class="px-3 py-1 bg-green-500 text-white rounded">📞 Call</button>
+        </div>
+      </div>
+
+     
+      <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition relative">
+        <button onclick="toggleLove(this)" class="absolute top-3 right-3 text-xl text-gray-400">♡</button>
+        <img src="./B12-A5-Emergency-Hotline/assets/police.png" alt="Police" class="h-12 mx-auto mb-3">
+        <h2 class="font-semibold text-lg text-center">Police HelpLine Number</h2>
+        <p class="text-sm text-gray-500 text-center">Police</p>
+        <p class="text-2xl font-bold my-2 text-center">999</p>
+        <p class="text-sm  my-2 text-center">Police</p>
+        <div class="flex justify-center space-x-2 mt-3">
+          <button onclick="copyNumber('100')" class="px-3 py-1 bg-gray-200 rounded">Copy</button>
+          <button onclick="makeCall('Police HelpLine Number','999')" class="px-3 py-1 bg-green-500 text-white rounded">📞 Call</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition relative">
+        <button onclick="toggleLove(this)" class="absolute top-3 right-3 text-xl text-gray-400">♡</button>
+        <img src="./B12-A5-Emergency-Hotline/assets/fire-service.png" alt="Police" class="h-12 mx-auto mb-3">
+        <h2 class="font-semibold text-lg text-center">Fire service Number</h2>
+        <p class="text-sm text-gray-500 text-center">Fire service</p>
+        <p class="text-2xl font-bold my-2 text-center">999</p>
+        <p class="text-sm  my-2 text-center">Fire</p>
+        <div class="flex justify-center space-x-2 mt-3">
+          <button onclick="copyNumber('100')" class="px-3 py-1 bg-gray-200 rounded">Copy</button>
+          <button onclick="makeCall('Fire service Number','999')" class="px-3 py-1 bg-green-500 text-white rounded">📞 Call</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition relative">
+        <button onclick="toggleLove(this)" class="absolute top-3 right-3 text-xl text-gray-400">♡</button>
+        <img src="./B12-A5-Emergency-Hotline/assets/ambulance.png" alt="Police" class="h-12 mx-auto mb-3">
+        <h2 class="font-semibold text-lg text-center">Ambulance Service</h2>
+        <p class="text-sm text-gray-500 text-center">Ambulance</p>
+        <p class="text-2xl font-bold my-2 text-center">1994-999999</p>
+        <p class="text-sm  my-2 text-center">health</p>
+        <div class="flex justify-center space-x-2 mt-3">
+          <button onclick="copyNumber('100')" class="px-3 py-1 bg-gray-200 rounded">Copy</button>
+          <button onclick="makeCall('Ambulance Service','1994-999999')" class="px-3 py-1 bg-green-500 text-white rounded">📞 Call</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition relative">
+        <button onclick="toggleLove(this)" class="absolute top-3 right-3 text-xl text-gray-400">♡</button>
+        <img src="./B12-A5-Emergency-Hotline/assets/emergency.png" alt="Police" class="h-12 mx-auto mb-3">
+        <h2 class="font-semibold text-lg text-center">Women & Child helpline</h2>
+        <p class="text-sm text-gray-500 text-center">Women & Child helpline</p>
+        <p class="text-2xl font-bold my-2 text-center">109</p>
+        <p class="text-sm  my-2  text-center">help</p>
+        <div class="flex justify-center space-x-2 mt-3">
+          <button onclick="copyNumber('100')" class="px-3 py-1 bg-gray-200 rounded">Copy</button>
+          <button onclick="makeCall('Women & Child helpline','109')" class="px-3 py-1 bg-green-500 text-white rounded">📞 Call</button>
+        </div>
+      </div>
+
+
+      <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition relative">
+        <button onclick="toggleLove(this)" class="absolute top-3 right-3 text-xl text-gray-400">♡</button>
+        <img src="./B12-A5-Emergency-Hotline/assets/emergency.png" alt="Police" class="h-12 mx-auto mb-3">
+        <h2 class="font-semibold text-lg text-center">Anti-Corruption Helpline</h2>
+        <p class="text-sm text-gray-500 text-center">Anti-Corruption</p>
+        <p class="text-2xl font-bold my-2 text-center">106</p>
+        <p class="text-sm  my-2  text-center">Govt.</p>
+        <div class="flex justify-center space-x-2 mt-3">
+          <button onclick="copyNumber('100')" class="px-3 py-1 bg-gray-200 rounded">Copy</button>
+          <button onclick="makeCall('Anti-Corruption Helpline','106')" class="px-3 py-1 bg-green-500 text-white rounded">📞 Call</button>
+        </div>
+      </div>
+
+
+
+      <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition relative">
+        <button onclick="toggleLove(this)" class="absolute top-3 right-3 text-xl text-gray-400">♡</button>
+        <img src="./B12-A5-Emergency-Hotline/assets/emergency.png" alt="Police" class="h-12 mx-auto mb-3">
+        <h2 class="font-semibold text-lg text-center">Electricity Helpline</h2>
+        <p class="text-sm text-gray-500 text-center">Electricity Outage</p>
+        <p class="text-2xl font-bold my-2 text-center">16216</p>
+        <p class="text-sm  my-2  text-center">Electricity</p>
+        <div class="flex justify-center space-x-2 mt-3">
+          <button onclick="copyNumber('100')" class="px-3 py-1 bg-gray-200 rounded">Copy</button>
+          <button onclick="makeCall('Electricity Helpline','16216')" class="px-3 py-1 bg-green-500 text-white rounded">📞 Call</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition relative">
+        <button onclick="toggleLove(this)" class="absolute top-3 right-3 text-xl text-gray-400">♡</button>
+        <img src="./B12-A5-Emergency-Hotline/assets/emergency.png" alt="Police" class="h-12 mx-auto mb-3">
+        <h2 class="font-semibold text-lg text-center">Brac Helpline</h2>
+        <p class="text-sm text-gray-500 text-center">Brac</p>
+        <p class="text-2xl font-bold my-2 text-center">16445</p>
+        <p class="text-sm  my-2  text-center">NGO</p>
+        <div class="flex justify-center space-x-2 mt-3">
+          <button onclick="copyNumber('100')" class="px-3 py-1 bg-gray-200 rounded">Copy</button>
+          <button onclick="makeCall('Brac Helpline','16445')" class="px-3 py-1 bg-green-500 text-white rounded">📞 Call</button>
+        </div>
+      </div>
+
+
+      <div class="bg-white rounded-2xl shadow-lg p-5 hover:shadow-xl transition relative">
+        <button onclick="toggleLove(this)" class="absolute top-3 right-3 text-xl text-gray-400">♡</button>
+        <img src="./B12-A5-Emergency-Hotline/assets/emergency.png" alt="Police" class="h-12 mx-auto mb-3">
+        <h2 class="font-semibold text-lg text-center">Bangladesh RAilway Helpline</h2>
+        <p class="text-sm text-gray-500 text-center">Bangladesh RAilway</p>
+        <p class="text-2xl font-bold my-2 text-center">163</p>
+        <p class="text-sm  my-2  text-center">Travel</p>
+        <div class="flex justify-center space-x-2 mt-3">
+          <button onclick="copyNumber('100')" class="px-3 py-1 bg-gray-200 rounded">Copy</button>
+          <button onclick="makeCall('Bangladesh Railway Helpline','163')" class="px-3 py-1 bg-green-500 text-white rounded">📞 Call</button>
+        </div>
+      </div>
+
+     
+
+    </div>
+
+  
+    <div class="bg-white rounded-2xl shadow-lg p-5">
+      <div class="flex justify-between items-center">
+        <h2 class="font-semibold text-lg">📞 Call History</h2>
+        <button onclick="clearHistory()" class="text-sm text-red-500">Clear</button>
+      </div>
+      <ul id="historyList" class="mt-3 space-y-2 text-sm text-gray-700">
+    
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
